@@ -11,7 +11,7 @@ const inputs: Record<string, string> = {
     "(1) 1-2",
 };
 
-tap.test("naive_url", async (t) => {
+tap.test("phone_number", async (t) => {
   await t.test("exercise_input tests", async (t) => {
     for (let key of Object.keys(inputs)) {
       const res = inputs[key] === "no_match" ? null : [inputs[key]];
