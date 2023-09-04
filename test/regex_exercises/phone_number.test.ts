@@ -1,5 +1,5 @@
 import tap from "tap";
-import { phoneNumberFinder } from "../src/regex_exercises/phone_number";
+import { phoneNumberFinder } from "../../src/regex_exercises/phone_number";
 
 const inputs: Record<string, string> = {
   "My phone number is (039) 02-121212": "(039) 02-121212",

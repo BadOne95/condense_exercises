@@ -1,5 +1,5 @@
 import tap from "tap";
-import { urlValidator } from "../src/regex_exercises/naive_url";
+import { urlValidator } from "../../src/regex_exercises/naive_url";
 
 const inputs: Record<string, "OK" | "NO"> = {
   "http://condense.tech": "OK",
