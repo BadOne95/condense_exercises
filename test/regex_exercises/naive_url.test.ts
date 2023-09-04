@@ -1,4 +1,4 @@
-import tap from "tap";
+import { test } from "tap";
 import { urlValidator } from "../../src/regex_exercises/naive_url";
 
 const inputs: Record<string, "OK" | "NO"> = {
@@ -12,7 +12,7 @@ const inputs: Record<string, "OK" | "NO"> = {
   "http://cond,com": "NO",
 };
 
-tap.test("naive_url", async (t) => {
+test("naive_url > ", async (t) => {
   await t.test("exercise_input tests", async (t) => {
     for (let key of Object.keys(inputs)) {
       const res = inputs[key] === "OK";

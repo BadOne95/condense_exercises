@@ -1,4 +1,4 @@
-import tap from "tap";
+import { test } from "tap";
 import { phoneNumberFinder } from "../../src/regex_exercises/phone_number";
 
 const inputs: Record<string, string> = {
@@ -11,7 +11,7 @@ const inputs: Record<string, string> = {
     "(1) 1-2",
 };
 
-tap.test("phone_number", async (t) => {
+test("phone_number > ", async (t) => {
   await t.test("exercise_input tests", async (t) => {
     for (let key of Object.keys(inputs)) {
       const res = inputs[key] === "no_match" ? null : [inputs[key]];
