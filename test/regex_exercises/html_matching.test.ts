@@ -21,9 +21,8 @@ tap.test("html_matching", async (t) => {
   });
 
   await t.test("free_test", async (t) => {
-    const input = '<b href="https://example.com">Visit Example</a>';
+    const input = '<a <p> href="https://example.com">Visit Example</a>';
     const expectedResult = undefined;
-    console.log(htmlMatcher(input));
     t.equal(htmlMatcher(input), expectedResult);
     t.end();
   });
