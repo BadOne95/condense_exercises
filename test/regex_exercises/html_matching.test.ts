@@ -20,9 +20,16 @@ test("html_matching > ", async (t) => {
     t.end();
   });
 
-  await t.test("free_test", async (t) => {
+  await t.test("other tags #1", async (t) => {
     const input = '<a <p> href="https://example.com">Visit Example</a>';
     const expectedResult = undefined;
+    t.equal(htmlMatcher(input), expectedResult);
+    t.end();
+  });
+
+  await t.test("other tags #2", async (t) => {
+    const input = '<a href="https://example.com"><p>Visit Example</p></a>';
+    const expectedResult = "<p>Visit Example</p>";
     t.equal(htmlMatcher(input), expectedResult);
     t.end();
   });
