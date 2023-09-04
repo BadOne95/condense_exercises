@@ -22,8 +22,8 @@ tap.test("naive_url", async (t) => {
   });
 
   await t.test("free_test", async (t) => {
-    const url = "pippo";
-    const res = false;
+    const url = "https://condense/Foo/slash.tech";
+    const res = true;
 
     t.equal(res, urlValidator(url));
     t.end();
