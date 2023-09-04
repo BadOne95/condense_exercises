@@ -1,19 +1,28 @@
 {
   "name": "condense_exercises",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "condense exercises",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "BadOne",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BadOne95/condense_exercises.git"
   },
-  "author": "BadOne",
-  "license": "ISC",
+  "homepage": "https://github.com/BadOne95/condense_exercises#readme",
   "bugs": {
     "url": "https://github.com/BadOne95/condense_exercises/issues"
   },
-  "homepage": "https://github.com/BadOne95/condense_exercises#readme"
+  "scripts": {
+    "test": "tap --node-arg=--require=ts-node/register"
+  },
+  "devDependencies": {
+    "tap": "^16.3.8"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "tap": {
+    "ts": true
+  }
 }
