@@ -14,6 +14,6 @@ http://asdasd   asdasdad # => NO
 http://cond,com # => NO
 */
 
-const regex = /^https?:\/\/[0-9a-zA-Z\.\-\/]+$/;
+const regexp = /^https?:\/\/[0-9a-zA-Z\.\-\/]+$/;
 
-export const urlValidator = (url: string) => regex.test(url);
+export const urlValidator = (url: string) => regexp.test(url);

@@ -5,7 +5,6 @@ anchor tags (<a></a>). For example, given the input
 the regular expression should extract Visit Example as the output
 */
 
-export const htmlMatcher = (text: string) => {
-  const reg = /<a[^<]*?>(?<content>.*?)<\/a>/;
-  return reg.exec(text)?.groups.content;
-};
+const regexp = /<a.*?>(?<content>.*)<\/a>/;
+
+export const htmlMatcher = (text: string) => regexp.exec(text)?.groups.content;

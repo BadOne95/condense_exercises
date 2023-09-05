@@ -9,6 +9,6 @@ Phone numbers cannot have letters. Numbers like (800) STAR-121212 are not valid 
 Every country has its own rules for phone numbers. Even a number like (1) 1-2 can be a valid phone number
 */
 
-const regex = /\(\d+\)\s\d+\-\d+/g;
+const regexp = /\(\d+\)\s\d+\-\d+/g;
 
-export const phoneNumberFinder = (text: string) => text.match(regex);
+export const phoneNumberFinder = (text: string) => text.match(regexp);
