@@ -42,10 +42,9 @@ const materialVariation: Product = {
 */
 
 type sizeType = "XXS" | "XS" | "S" | "M" | "L" | "XL" | "XXL";
-type colorType = "blue" | "red" | "green";
+type colorType = "blue" | "red" | "green" | "black";
 type materialType = "cotton" | "linen" | "acrylic";
-
-export type Product = {
+type Product = {
   name: string;
   price: number;
   description: string;
