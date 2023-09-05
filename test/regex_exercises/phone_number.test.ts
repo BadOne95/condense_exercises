@@ -14,18 +14,33 @@ const inputs: Record<string, string> = {
 test("phone_number > ", async (t) => {
   await t.test("exercise_input tests", async (t) => {
     for (let key of Object.keys(inputs)) {
-      const res = inputs[key] === "no_match" ? null : [inputs[key]];
+      const res = inputs[key] === "no_match" ? undefined : [inputs[key]];
       t.same(phoneNumberFinder(key), res);
     }
     t.end();
   });
 
-  await t.test("free_test", async (t) => {
+  await t.test("multiple numbers test", async (t) => {
     const url =
-      "My phone numbers are (039) 02-121212 and (800) STAR-121212 but on sunday you will only find me at (123) 456-7890";
+      "My phone numbers are (039) 02-121212 and (800) STAR-121212 but on sunday you can only find me at (123) 456-7890";
     const res = ["(039) 02-121212", "(123) 456-7890"];
-
     t.same(phoneNumberFinder(url), res);
+    t.end();
+  });
+
+  await t.test("missing numbers test (prefix)", async (t) => {
+    const url = "My phone number is () 02-121212";
+    t.same(phoneNumberFinder(url), undefined);
+    t.end();
+  });
+  await t.test("missing numbers test (left part)", async (t) => {
+    const url = "My phone number is (123) -121212";
+    t.same(phoneNumberFinder(url), undefined);
+    t.end();
+  });
+  await t.test("missing numbers test (right part)", async (t) => {
+    const url = "My phone number is (123) 02-";
+    t.same(phoneNumberFinder(url), undefined);
     t.end();
   });
 });
