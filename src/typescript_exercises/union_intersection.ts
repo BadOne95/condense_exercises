@@ -49,7 +49,7 @@ type Product = {
   price: number;
   description: string;
 } & (
-  | { variationType?: undefined }
+  | { variationType?: never }
   | { variationType: "size"; size: sizeType }
   | { variationType: "color"; color: colorType }
   | { variationType: "material"; material: materialType }

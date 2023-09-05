@@ -29,23 +29,15 @@ interface Product {
   category: Category;
 }
 
-export const isString = (
-  data: Product | Category | string | null
-): data is string => {
-  return data?.constructor === String;
-};
+export const isString = (data: unknown): data is string =>
+  data?.constructor === String;
 
-export const isCategory = (
-  data: Product | Category | string | null
-): data is Category => {
-  return (data as Category)?.name !== undefined;
-};
+export const isCategory = (data: unknown): data is Category =>
+  typeof (data as Category)?.name === "string";
 
-export const isProduct = (
-  data: Product | Category | string | null
-): data is Product => {
-  return (data as Product)?.category?.name !== undefined;
-};
+export const isProduct = (data: unknown): data is Product =>
+  typeof (data as Product)?.category === "object" &&
+  isCategory((data as Product).category);
 
 export function processData(
   input: Product | Category | string | null
