@@ -1,0 +1,4 @@
+// Soluzione
+
+Questo file è da considerarsi un'aggiunta alla soluzione (chiaramente parziale) di questo esercizio.
+La soluzione è pensata per un database mysql che implementa i modelli specificati nella cartella models.

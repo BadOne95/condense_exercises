@@ -1,4 +1,4 @@
-Scenario
+// Scenario
 You're developing an ecommerce for a startup selling shoes.
 
 Each shoe model has a unique name and material (e.g. leather, rubber) and can be 
@@ -24,7 +24,8 @@ Also, the Marketing department wants to be able to manual order the shoes in eac
 Listing all shoes in a category should return all shoes in that category and all 
 its subcategories avoiding duplicates.
 
-Problem
+
+// Problem
 Design the database for the catalog application and develop a web application which 
 exposes a GraphQL API to query the catalog and navigate the categories tree, allowing to:
 
