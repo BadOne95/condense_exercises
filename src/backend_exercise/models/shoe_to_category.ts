@@ -11,7 +11,7 @@ import { Shoe } from "./shoe";
 import { Category } from "./category";
 
 @Entity()
-@Unique(["modelId", "color", "size"])
+@Unique(["shoeId", "categoryId"])
 export class ShoeToCategory {
   @PrimaryGeneratedColumn()
   public id: number;

@@ -7,7 +7,7 @@ import {
   Unique,
   OneToMany,
 } from "typeorm";
-import { ShoeToCategory } from "./shoe_category";
+import { ShoeToCategory } from "./shoe_to_category";
 
 @Entity()
 @Unique(["name"])

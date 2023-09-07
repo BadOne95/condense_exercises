@@ -9,7 +9,7 @@ import {
   OneToMany,
 } from "typeorm";
 import { ShoeModel } from "./shoe_model";
-import { ShoeToCategory } from "./shoe_category";
+import { ShoeToCategory } from "./shoe_to_category";
 
 @Entity()
 @Unique(["modelId", "color", "size"])
