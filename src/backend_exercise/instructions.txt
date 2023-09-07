@@ -1,4 +1,3 @@
-/*
 Scenario
 You're developing an ecommerce for a startup selling shoes.
 
@@ -35,4 +34,3 @@ exposes a GraphQL API to query the catalog and navigate the categories tree, all
 
 The application should be covered by tests. BDD is preferred.
 You can use any library and/or framework to solve the problem.
-*/

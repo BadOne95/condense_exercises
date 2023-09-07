@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   Unique,
   OneToMany,
+  Index,
 } from "typeorm";
 import { ShoeToCategory } from "./shoe_to_category";
 
@@ -24,6 +25,7 @@ export class Category {
   @Column()
   public name: string;
 
+  @Index()
   @Column()
   public path: string;
 
