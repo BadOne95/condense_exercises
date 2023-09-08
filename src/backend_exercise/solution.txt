@@ -1,4 +1,18 @@
-// Soluzione
+Giusto un paio di note.
 
-Questo file è da considerarsi un'aggiunta alla soluzione (chiaramente parziale) di questo esercizio.
-La soluzione è pensata per un database mysql che implementa i modelli specificati nella cartella models.
+Il campo 'path' presente nel modello 'categories' e nel modello 'shoesToCategories' è 
+usato per rappresentare il percorso dal nodo padre di tutto l'albero fino al nodo padre 
+del nodo/foglia in questione mediante i loro id univoci in tabella; è dunque così composto:
+
+   "0-" per il nodo senza padre, che diremo avere id 1
+   "0-1-" per tutti i nodi figli di primo livello del nodo 1, che diremo 2,3,4
+   "0-1-2", per tutti i figli di 2 eccetera
+
+Questo è facilmente calcolabile dato che al marketing non è permesso di modificare la struttura dell'albero.
+
+
+Il peso, anch'esso presente sia su nodi figli che su foglie, viene calcolato usando i numeri decimali al momento 
+della creazione su database di tutto l'albero suddividendo i decimali a ordini di grandezza sempre minori ad 
+ogni livello. Questo permette sia un ordinamento relativo delle foglie direttamente figlie di un dato nodo sia
+un ordinamento assoluto nel caso si richiedano tutte le foglie sotto un dato nodo.
+   

@@ -1,6 +1,6 @@
 {
   "name": "condense_exercises",
-  "version": "1.7.4",
+  "version": "1.8.0",
   "description": "condense exercises",
   "main": "index.js",
   "author": "BadOne",
@@ -9,22 +9,17 @@
     "type": "git",
     "url": "git+https://github.com/BadOne95/condense_exercises.git"
   },
-  "homepage": "https://github.com/BadOne95/condense_exercises#readme",
-  "bugs": {
-    "url": "https://github.com/BadOne95/condense_exercises/issues"
-  },
   "scripts": {
+    "prisma:generate": "npx prisma generate",
     "test": "tap --node-arg=--require=ts-node/register"
   },
   "devDependencies": {
-    "cpy-cli": "^5.0.0",
     "prisma": "^4.10.1",
     "tap": "^16.3.8"
   },
   "dependencies": {
     "@prisma/client": "^4.10.1",
-    "ts-node": "^10.9.1",
-    "typeorm": "^0.2.45"
+    "ts-node": "^10.9.1"
   },
   "tap": {
     "ts": true
